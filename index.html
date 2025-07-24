@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles.css">
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=check" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -49,7 +50,7 @@
         <p>Track workouts, monitor progess, and achieve your goals with our all-in-one fitness app.</p>
         <div class="hero-buttons">
           <button class="btn-primary">Get Started</button>
-          <button class="btn-secondary">Book a demo</button>
+          <button class="btn-secondary"><img width="20" height="20" src="https://img.icons8.com/fluency-systems-regular/48/dumbbell.png" alt="dumbbell"/>Book a demo</button>
         </div>
       </div>
     </div>
@@ -66,7 +67,7 @@
         <a href="index.html">
           <img src="/img/video-preview.png" alt="video preview" class="video-image">
         </a>
-        <a href="#">Get Started</a>
+        <a href="#" class="cta-button1">Get Started</a>
       </div>
     </div>
   </section>
@@ -105,8 +106,8 @@
   <section class="pricing-section">
     <div class="pricing-header">
       <h2>Pricing</h2>
+      <p>Start with our free plans and unlock premium plans as you grow.</p>
     </div>
-    <p>Start with our free plans and unlock premium plans as you grow.</p>
     <div class="pricing-container">
       <div class="pricing-card basic">
         <h3>Basic</h3>
@@ -114,32 +115,32 @@
         <p class="price">
           <span>Free</span>
           <span class="note">*no credit card needed</span>
-        </p>
+        </p><hr>
         <ul class="features">
-          <li><span class="material-symbols-outlined">check_small</span>Customizable workout plans</li>
-          <li><span class="material-symbols-outlined">check_small</span>Track daily progress</li>
-          <li><span class="material-symbols-outlined">check_small</span>Nutrition tracker</li>
-          <li><span class="material-symbols-outlined">check_small</span>24-hour support response time</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Customizable workout plans</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Track daily progress</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Nutrition tracker</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>24-hour support response time</li>
         </ul>
         <a href="#">
-          <button>Get Started today</button>
+          <button class="cta-button">Get Started today</button>
         </a>
       </div>
 
       <div class="pricing-card pro">
         <h3>Pro</h3>
-        <p class="plan-desc">Everything in the basic plan plus advanced features for serious athletes.</p>
+        <p class="plan-desc1">Everything in the basic plan plus advanced features for serious athletes.</p>
         <p class="price">
           <span>$29</span>
           <span class="note">/month</span>
-        </p>
+        </p><hr>
         <ul class="features">
-          <li>Personalized coaching</li>
-          <li>Advanced analytics</li>
-          <li>Offline access</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Personalized coaching</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Advanced analytics</li>
+          <li><span class="material-symbols-outlined" style="color: #888;">check</span>Offline access</li>
         </ul>
         <a href="#">
-          <button>Get Started today</button>
+          <button class="cta-button">Get Started today</button>
         </a>
       </div>
     </div>
@@ -152,7 +153,7 @@
       <h3 class="faq-heading">Frequently Asked Questions</h3>
       <ul class="faq-categories">
         <li class="faq-category active">All</li>
-        <li class="faq-category">Getting Started</ul>li>
+        <li class="faq-category">Getting Started</li>
         <li class="faq-category">Pricing</li>
       </ul>
 
@@ -215,6 +216,15 @@
   <!-- JS Aspect -->
   <script>
     document.querySelector("footer span").textContent = new Date().getFullYear();
+
+    // Add functionality to hamburger menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('mobile-menu');
+      mobileMenu.classList.toggle('mobile-menu open');
+    })
   </script>
 </body>
 </html>
